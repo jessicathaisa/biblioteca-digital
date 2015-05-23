@@ -6,10 +6,17 @@ Gabriel de Quadros Ligneul 1212560
 Jéssica Thaisa Silva de Almeida 1013528  
 
 # Biblioteca Digital em Lua
-bla bla bla
+Este projeto é um repositório (site) em Lua de artigos de encontros 
+ciêntíficos regulares.
+
+## Diretórios
+-------------------------------------------------------------------------------
+doc | Artefatos não executáveis
+-------------------------------------------------------------------------------
 
 ## Organização
-Todas as tarefas serão realizadas em conjunto pelos membros da equipe: Jéssica e Gabriel. Para cada tarefa, um será o responsável e o outro o revisor.
+Todas as tarefas serão realizadas em conjunto pelos membros da equipe: Jéssica 
+e Gabriel. Para cada tarefa, um será o responsável e o outro o revisor.
 
 ## Planejamento
 - Marco 1: Entrega 28/05
@@ -43,4 +50,6 @@ Todas as tarefas serão realizadas em conjunto pelos membros da equipe: Jéssica
 - Revisão final do código - 25/06
 
 ## Motivação
-O grupo está profundamente entusiasmado em proporcionar à comunidade ciêntifica um sistema inovador de tamanha importância para a disponibilização de publicações.
+O grupo está profundamente entusiasmado em proporcionar à comunidade 
+ciêntifica um sistema inovador de tamanha importância para a disponibilização 
+de publicações.
