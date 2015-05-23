@@ -10,9 +10,9 @@ Este projeto é um repositório (site) em Lua de artigos de encontros
 ciêntíficos regulares.
 
 ## Diretórios
--------------------------------------------------------------------------------
+Nome | Conteúdo
+---|---
 doc | Artefatos não executáveis
--------------------------------------------------------------------------------
 
 ## Organização
 Todas as tarefas serão realizadas em conjunto pelos membros da equipe: Jéssica 
