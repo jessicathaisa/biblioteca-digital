@@ -4,7 +4,7 @@
 - Armazenar e disponibilizar artigos ciêntíficos.
 - Permitir que o usuário (qual usuário?) coloque novos artigos no repositório.
 - Permitir busca sobre os artigos. (por nome, autor, palavra-chave?)
-- Informar nome, altor e resumo do artigos.
+- Informar nome, autor e resumo do artigos.
 - Informar quantas pessoas fizeram download do artigo.
 - Informar quantas citações o artigo possui.
 
