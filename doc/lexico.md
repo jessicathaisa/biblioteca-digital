@@ -1,11 +1,5 @@
 # Léxico Ampliado da Linguagem
 
-Nome | Artigos mais citados
---- | :--
-Tipo | Objeto
-Noção | Uma lista com os artigos científicos ordenada em ordem decrescente de número de citações.
-Impacto | <ul><li>É visualizado pelo usuário;</li><li>é gerada automaticamente pelo sistema;</li><li>É filtrável.</li></ul>
-
 Nome | Administrador
 --- | :--
 Tipo | Sujeito
@@ -18,6 +12,12 @@ Tipo | Objeto
 Noção | Texto científico publicado em um congresso.
 Impacto | <ul><li>Pode ser escrito por mais de um autor;</li><li>Deve possuir um nome, um resumo e uma lista de palavras-chave;</li><li>Artigos podem fazer citações de outros artigos.</li></ul>
 
+Nome | Artigos mais citados
+--- | :--
+Tipo | Objeto
+Noção | Uma lista com os artigos científicos ordenada em ordem decrescente de número de citações.
+Impacto | <ul><li>É visualizado pelo usuário;</li><li>é gerada automaticamente pelo sistema;</li><li>É filtrável.</li></ul>
+
 Nome | Atualizar número de acessos
 --- | :--
 Tipo | Verbo
@@ -29,6 +29,12 @@ Nome | Autor
 Tipo | Objeto
 Noção | Pessoa que participou no processo de escrita de um artigo científico.
 Impacto | <ul><li>É cadastrado pelo Editor;</li><li>É utilizado com busca;</li><li>É ligado a um ou mais artigos;</li><li>É citado em artigos científicos.</li></ul>
+
+Nome | Biblioteca digital
+--- | :--
+Tipo | Objeto
+Noção | Um sistema web disponibilizado em forma de site onde são disponibilizados artigos científicos separados em congressos e edições, que podem ser consultados.
+Impacto | <ul><li>É utilizado pelo usuário do sistema.</li></ul>
 
 Nome | Citação
 --- | :--
