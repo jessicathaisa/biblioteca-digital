@@ -2,6 +2,8 @@ PUC-Rio
 Junho de 2015  
 INF1629 - Princípios de Engenharia de Software  
 Professor Júlio César Sampaio  
+André Marçal De Matos Faria 0712559  
+Allan Schöttler 1010440  
 Gabriel de Quadros Ligneul 1212560  
 Jéssica Thaisa Silva de Almeida 1013528  
 
@@ -15,8 +17,7 @@ Nome | Conteúdo
 doc | Artefatos não executáveis
 
 ## Organização
-Todas as tarefas serão realizadas em conjunto pelos membros da equipe: Jéssica 
-e Gabriel. Para cada tarefa, um será o responsável e o outro o revisor.
+O Gabriel será o gerente do projeto e as tarefas serão realizadas em conjunto pelos membros da equipe. Para cada tarefa, um será o responsável e o outro o revisor.
 
 ## Planejamento
 - Marco 1: Entrega 28/05
