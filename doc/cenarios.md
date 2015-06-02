@@ -3,13 +3,13 @@
 <table> <tr> <th>Título</th> <th align="left">Login no Sistema</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Usuário obtém acesso à área restrita.</td>
+      <td>Usuário (Editor ou Administor) obtém acesso à área restrita.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Usuário está na página http de login.</td>
+      <td>Usuário está na página de login.</td>
     </tr><tr>
       <td>Atores</td>
-          <td>Sistema e Usuário.</td>
+      <td>Sistema e Usuário.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Identificador e senha do usuário.</td>
@@ -19,7 +19,7 @@
         <ul>
           <li>Par <identificar, senha> não está cadastrado. [Avisa que o par não está cadastrado]</li>
           <li>Algum campo ficou em branco. [Avisa quais campos não foram preenchidos]</li>
-          <li>O usuário não lembra de seus dados de login. [Esqueceu dos Dados]</li>
+          <li>O usuário não lembra de seus dados de login. [Cenário: Esqueceu dos Dados]</li>
         </ul>
       </td>
     </tr><tr>
@@ -28,7 +28,7 @@
         <ul>
           <li>Usuário preenche os campos de login e senha.</li>
           <li>Usuário confirma.</li>
-          <li>Sistema abre página http de acesso restrito.</li>
+          <li>Sistema abre página de acesso restrito.</li>
         </ul>
       </td>
     </tr>
@@ -40,7 +40,7 @@
       <td>Enviar os dados de login para o email do usuário.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Usuário está na página http de login.</td>
+      <td>Usuário está na página de login.</td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Usuário.</td>
@@ -72,7 +72,12 @@
       <td>Alterar a senha de um usuário.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Usuário está na página de alteração de senha.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Usuário está na página de alteração de senha.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Usuário.</td>
@@ -105,7 +110,12 @@
       <td>Cadastrar um novo usuário no Sistema.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Admistrador logado no Sistema na página de cadastro de novo usuário.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Admistrador está na página de cadastro de novo usuário.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Administrador.</td>
@@ -116,7 +126,7 @@
       <td>Exceções</td>
       <td>
         <ul>
-          <li>Identificador/email de usuário já cadastrado [Avisa que identificador/email já está em uso]</li>
+          <li>Identificador ou email de usuário já cadastrado [Avisa qual dado já está em uso]</li>
         </ul>
       </td>
     </tr><tr>
@@ -140,7 +150,12 @@
       <td>Disponibilizar no Sistema um novo evento ciêntífico.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Admistrador logado no Sistema na página de cadastro de novo evento.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Admistrador está na página de cadastro de novo evento.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Adminstrador.</td>
@@ -175,7 +190,12 @@
       <td>Cadastrar uma nova edição de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Admistrador logado no Sistema na página de cadastro de nova edição.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Admistrador está na página de cadastro de nova edição.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Administrador.</td>
@@ -209,7 +229,12 @@
       <td>Permitir que um Editor possa inserir e alterar artigos de uma edição de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Administrador logado na página de associar Editor.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Administrador está na página de associar Editor.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Administrador.</td>
@@ -246,7 +271,12 @@
       <td>Disponibilizar os dados do artigo para a comunidade.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Editor logado na página de cadastro de novo artigo.</td>
+      <td>
+        <ul>
+          <li>O cenário Login no Sistema é pré-requisito.</li>
+          <li>Editor logado na página de cadastro de novo artigo.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Editor.</td>
@@ -320,16 +350,40 @@
     </tr>
 </table>
 
+<table> <tr> <th>Título</th> <th align="left">Exibir Página</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Exibir a página inicial de um evento para um Leitor.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Leitor está em um navegador.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Endereço da página do evento.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>O Leitor abre a página do evento.</li>
+          <li>O sistema lista as edições do evento.<li>
+        </ul>
+      </td>
+    </tr>
+</table>
+
 <table> <tr> <th>Título</th> <th align="left">Buscar Artigo</th>
     </tr><tr>
       <td>Objetivo</td>
       <td>Leitor encontra um artigo de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Leitor está no site http do evento que o artigo pertence.</td>
+      <td>O cenário Exibir Página é pré-requisito.</td>
     </tr><tr>
       <td>Atores</td>
-      <td>Sistema, Busca Google, Leitor.</td>
+      <td>Sistema, Busca Google e Leitor.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Palavras chaves para encontrar o artigo.</td>
@@ -357,7 +411,7 @@
       <td>Leitor vizualiza todos os artigos de uma edição de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Leitor está na página de um evento.</td>
+      <td>O cenário Exibir Página é pré-requisito.</td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Editor.</td>
@@ -385,16 +439,13 @@
       <td>Leitor sabe quais são os artigos, tópicos e autores mais citados de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Leitor está no site evento.</td>
+      <td>O cenário Exibir Página é pré-requisito.</td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Leitor.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Número de citações dos artigo.</td>
-    </tr><tr>
-      <td>Exceções</td>
-      <td>N/A</td>
     </tr><tr>
       <td>Episódios</td>
       <td>
@@ -414,16 +465,13 @@
       <td>Leitor vizualiza o pdf de um artigo.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Leitor está numa página do evento que possui o artigo desejado.</td>
+      <td>Entre os cenários Buscar Artigo, Listar por Edição e Listar Mais citados, pelo menos um deles é pré-requisito.</td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Leitor.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Link para o pdf do artigo.</td>
-    </tr><tr>
-      <td>Exceções</td>
-      <td>N/A</td>
     </tr><tr>
       <td>Episódios</td>
       <td>
@@ -441,7 +489,12 @@
       <td>Sistema atualiza o número de citações de um artigo.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Sistema de busca do Google Scholar.</td>
+      <td>
+        <ul>
+          <li>É feito semanalmente.</li>
+          <li>Usa o sistema de busca do Google Scholar.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema e Google Scholar.</td>
