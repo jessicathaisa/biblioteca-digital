@@ -16,13 +16,13 @@ Nome | Artigos mais citados
 --- | :--
 Tipo | Objeto
 Noção | Uma lista com os artigos científicos ordenada em ordem decrescente de número de citações.
-Impacto | <ul><li>É visualizado pelo usuário;</li><li>é gerada automaticamente pelo sistema;</li><li>É filtrável.</li></ul>
+Impacto | <ul><li>É visualizado pelo leitor;</li><li>é gerada automaticamente pelo sistema;</li><li>É filtrável.</li></ul>
 
 Nome | Atualizar número de acessos
 --- | :--
 Tipo | Verbo
 Noção | O sistema conta cada vez em que o artigo científico é aberto para visualização. Essa contagem será feita através da chamada de uma função do servidor que ao ser chamada para abrir determinado artigo incrementa uma unidade ao número de acessos.
-Impacto | <ul><li>Após armazenado esse valor pode ser consultado pelos usuários do sistema.</li></ul>
+Impacto | <ul><li>Após armazenado esse valor pode ser consultado pelos leitores do sistema.</li></ul>
 
 Nome | Autor
 --- | :--
@@ -34,7 +34,7 @@ Nome | Biblioteca digital
 --- | :--
 Tipo | Objeto
 Noção | Um sistema web disponibilizado em forma de site onde são disponibilizados artigos científicos separados em congressos e edições, que podem ser consultados.
-Impacto | <ul><li>É utilizado pelo usuário do sistema.</li></ul>
+Impacto | <ul><li>É utilizado pelo usuário (leitor, administrador e editor) do sistema.</li></ul>
 
 Nome | Citação
 --- | :--
@@ -46,7 +46,7 @@ Nome | Contabilizar citações
 --- | :--
 Tipo | Verbo
 Noção | O sistema realiza a cada período de tempo uma contabilização geral de citações de todos os artigos científicos cadastrados. Essa contabilização se dá buscando no Google Scholar o número de citações do determinado artigo científico.
-Impacto | <ul><li>Após armazenado esse valor pode ser consultado pelos usuários do sistema.</li></ul>
+Impacto | <ul><li>Após armazenado esse valor pode ser consultado pelos usuários (leitores) do sistema.</li></ul>
 
 Nome | Congresso
 --- | :--
@@ -70,13 +70,13 @@ Nome | Número de acessos
 --- | :--
 Tipo | Objeto
 Noção | Número de vezes em que o artigo foi acessado através do sistema.
-Impacto | <ul><li>É atualizado pelo Sistema.</li><li>É visualizado pelo usuário.</li></ul>
+Impacto | <ul><li>É atualizado pelo Sistema.</li><li>É visualizado pelo leitor.</li></ul>
 
 Nome | Número de citações
 --- | :--
 Tipo | Objeto
 Noção | Número de vezes em que o artigo foi citado.
-Impacto | <ul><li>É contabilizado pelo Sistema.</li><li>É visualizado pelo usuário.</li></ul>
+Impacto | <ul><li>É contabilizado pelo Sistema.</li><li>É visualizado pelo leitor.</li></ul>
 
 Nome | Palavra-chave
 --- | :--
@@ -90,7 +90,7 @@ Tipo | Objeto
 Noção | É uma sinopse que introduz o tema e os conceitos abordados em um artigo científico.
 Impacto | <ul><li>É cadastrado pelo Editor;</li><li>É utilizado como busca.</li></ul>
 
-Nome | Usuário do sistema
+Nome | Leitor
 --- | :--
 Tipo | Sujeito
 Noção | Ator responsável por acessar o site e realizar buscas.
