@@ -483,6 +483,31 @@
     </tr>
 </table>
 
+<table> <tr> <th>Título</th> <th align="left">Avaliar Artigo</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Leitor da uma nota, de 1 a 5, a um artigo</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Entre os cenários Buscar Artigo, Listar por Edição e Listar Mais citados, pelo menos um deles é pré-requisito.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Nota do Leitor para o Artigo</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Sistema mostra interface para avaliar determinado artigo.</li>
+          <li>Autor preenche a nota do artigo.</li>
+          <li>Sistema contabiliza a nota do artigo e atualiza a média.</li>
+        </ul>
+      </td>
+    </tr>
+</table>
+
 <table> <tr> <th>Título</th> <th align="left">Atualiza Citações</th>
     </tr><tr>
       <td>Objetivo</td>
