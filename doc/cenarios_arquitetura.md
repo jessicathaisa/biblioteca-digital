@@ -1,39 +1,108 @@
-# Cenários
+# Cenários no Momento da Arquitetura
 
-<table> <tr> <th>Título</th> <th align="left">Login no Sistema</th>
+## Cenário de Integração
+
+<table> <tr> <th>Título</th> <th align="left">Software Biblioteca Digital</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Usuário (Editor ou Administor) obtém acesso à área restrita.</td>
+      <td>Disponibilizar artigos científicos e classificá-los por número de citações.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Usuário está na página de login.</td>
+      <td>Sistema web.</td>
     </tr><tr>
       <td>Atores</td>
-      <td>Sistema e Usuário.</td>
+      <td>Sistema, Administor, Editor e Leitor.</td>
     </tr><tr>
       <td>Recursos</td>
-      <td>Identificador e senha do usuário.</td>
+      <td>Artigos científicos.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Administrador cadatra Editor.</li>
+          <li>Administrador cadastra evento e edição.</li>
+          <li>Administrador associa Editor à uma edição.</li>
+          <li>Editor cadastra artigos ciêntíficos.</li>
+          <li>Sistema disponibiliza artigos.</li>
+          <li>Leitor busca e obtém artigos desejados.</li>
+        </ul>
+      </td>
+    </tr>
+</table>
+
+## Cenários do Model
+
+TODO
+
+## Cenários da Visão
+
+<table> <tr> <th>Título</th> <th align="left">Exibe Página de Login no Sistema</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Usuário preenche campos de texto com o login e a senha e o sistema informa se o login foi realizado.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>O usuário deve acessar a página host/login em um browser atual.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema, Administrador e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Campo de Texto para login; campo de texto para senha; botão para confirmação,
+          botão para esquecimento de dados.</td>
     </tr><tr>
       <td>Exceções</td>
       <td>
         <ul>
-          <li>Par <identificar, senha> não está cadastrado. [Avisa que o par não está cadastrado]</li>
-          <li>Algum campo ficou em branco. [Avisa quais campos não foram preenchidos]</li>
-          <li>O usuário não lembra de seus dados de login. [Cenário: Esqueceu dos Dados]</li>
+          <li>Par <identificar, senha> não está cadastrado. [Exibe uma mensage que o par não está cadastrado]</li>
+          <li>Algum campo ficou em branco após clicar confirmação. [Avisa qual campo ficou em branco]</li>
+          <li>O usuário clica no botão de esquecimento dos dados. [Cenário: Exibe Página de Esqueceu dos Dados]</li>
         </ul>
       </td>
     </tr><tr>
       <td>Episódios</td>
       <td>
         <ul>
-          <li>Usuário preenche os campos de login e senha.</li>
-          <li>Usuário confirma.</li>
-          <li>Sistema abre página de acesso restrito.</li>
+          <li>Usuário preenche o campo de login.</li>
+          <li>Usuário preenche o campo de senha.</li>
+          <li>Usuário clica no botão de confirmação.</li>
+          <li>Cenário: Exibe Página de Acesso Restrito.</li>
         </ul>
       </td>
     </tr>
 </table>
 
+<table> <tr> <th>Título</th> <th align="left">Exibe Página de Acesso Restrito</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td></td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td></td>
+    </tr><tr>
+      <td>Atores</td>
+      <td></td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td></td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>
+        <ul>
+          <li>.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>.</li>
+        </ul>
+      </td>
+    </tr>
+</table>
+
+<!--
 <table> <tr> <th>Título</th> <th align="left">Esqueceu dos Dados</th>
     </tr><tr>
       <td>Objetivo</td>
@@ -545,6 +614,11 @@
       </td>
     </tr>
 </table>
+-->
+
+## Cenários do Controle
+
+TODO
 
 ## Referências  
 http://www-di.inf.puc-rio.br/~karin/pos/cenario.pdf  
