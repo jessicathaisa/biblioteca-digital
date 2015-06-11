@@ -1,4 +1,9 @@
-#Testes e Inspeções
+# Testes e Inspeções
+
+# Planejamento dos Testes
+Como o sistema possui bastante interação com usuário, foi decidido que os testes seriam feitos de forma manual, seguindo os seguites casos de teste.
+
+# Casos de Teste
 
 ##Cenário 1: 
 - Login no sistema

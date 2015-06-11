@@ -8,8 +8,8 @@ Gabriel de Quadros Ligneul 1212560
 Jéssica Thaisa Silva de Almeida 1013528  
 
 # Biblioteca Digital em Lua
-Este projeto é um repositório (site) em Lua de artigos de encontros 
-ciêntíficos regulares.
+Este projeto é um sistema web em Lua que armazena artigos de encontros ciêntíficos regulares.
+O principal diferencial deste sistema é a capacidade de ordenar artigos pelo número de citações.
 
 ## Diretórios
 Nome | Conteúdo
@@ -20,37 +20,38 @@ doc | Artefatos não executáveis
 O Gabriel será o gerente do projeto e as tarefas serão realizadas em conjunto pelos membros da equipe. Para cada tarefa, um será o responsável e o outro o revisor.
 
 ## Planejamento
+O planejamento será dividido nos seguintes marcos:
 - Marco 1: Entrega 28/05
     - Requisitos funcionais
     - Requisitos não funcionais
     - Requisitos inversos
     - Cenario e LAL no instante dos requisitos
-- Marco 2: Entrega 09/06
+- Marco 2: Entrega 11/06
     - Análise: Planejamento dos testes e inspeções
-- Marco 3: Entreta 09/06
     - Arquitetura
     - Cenario e LAL no instante da arquitetura
+- Marco 3: Entrega 18/06
+    - Entrega parcial do código
+    - Banco de Dados Funcionando
+    - Consulta de artigos mais citados
+    - Classificação de artigos
 - Marco 4: Entrega 25/06
-    - Código
-    - Cenario e LAL no instante do código
+    - Entrega parcial do código
+    - Cadastro de editores, eventos e edições
+    - Cenarios e LAL no instante do código
+- Marco 5: Entrega 27/06
+    - Entrega final do código
     - Relatório de testes
     - Relatório de inspeção
 
 ## Controle
-- Entrega dos requisitos e cenários - 26/05
-- Revisão dos requisitos e cenários - 28/05
-- Planejamento dos testes - 28/05
-- Planejamento das inspeções - 30/05
-- Revisão dos testes e inspeções - 02/06
-- Entrega da arquitetura - 02/06
-- Revisão da arquitetura - 07/06
-- Primeira entrega do código - 11/06
-- Segunda entrega do código - 16/06
-- Revisão parcial do código - 18/06
-- Terceira entrega do código - 23/06
-- Revisão final do código - 25/06
+O controle será atualizado a medida que os marcos são feitos.
+- 22/05 Foi feito o planejamento do trabalho
+- 28/05 Foi feito o LAL no instante dos requisitos
+- 29/05 Foram feitos os cenários no instante dos requisitos
+- 02/06 Foi feita a arquitetura em alto nível
+- 11/06 Foram criados o planejamentos e os casos de teste
+- 11/06 Foi feita uma revisão no planejamento e nos cenários
 
 ## Motivação
-O grupo está profundamente entusiasmado em proporcionar à comunidade 
-ciêntifica um sistema inovador de tamanha importância para a disponibilização 
-de publicações.
+O grupo tentará proporcionar o melhor sistema possível, dada as limitações de tempo e habilidade de cada um.
