@@ -3,7 +3,7 @@
 <table> <tr> <th>Título</th> <th align="left">Login no Sistema</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Usuário (Editor ou Administor) obtém acesso à área restrita.</td>
+      <td>Usuário (Editor ou Administrador) obtém acesso à área restrita.</td>
     </tr><tr>
       <td>Contexto</td>
       <td>Usuário está na página de login.</td>
@@ -37,7 +37,7 @@
 <table> <tr> <th>Título</th> <th align="left">Esqueceu dos Dados</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Enviar os dados de login para o email do usuário.</td>
+      <td>Enviar os dados de login para o e-mail do usuário.</td>
     </tr><tr>
       <td>Contexto</td>
       <td>Usuário está na página de login.</td>
@@ -51,7 +51,7 @@
       <td>Exceções</td>
       <td>
         <ul>
-          <li>Email não cadastrado no Sistema. [Avisa que o email não está cadastrado]</li>
+          <li>Email não cadastrado no Sistema. [Avisa que o e-mail não está cadastrado]</li>
         </ul>
       </td>
     </tr><tr>
@@ -59,7 +59,7 @@
       <td>
         <ul>
           <li>Usuário informa ao Sistema que esqueceu a senha.</li>
-          <li>Sistema envia um email ao usuário com os dados de login.</li>
+          <li>Sistema envia um e-mail ao usuário com os dados de login.</li>
           <li>Sistema avisa que enviou os dados.</li>
         </ul>
       </td>
@@ -104,7 +104,7 @@
     </tr>
 </table>
 
-<table> <tr> <th>Título</th> <th align="left">Cadatrar Editor</th>
+<table> <tr> <th>Título</th> <th align="left">Cadastrar Editor</th>
     </tr><tr>
       <td>Objetivo</td>
       <td>Cadastrar um novo usuário no Sistema.</td>
@@ -113,7 +113,7 @@
       <td>
         <ul>
           <li>O cenário Login no Sistema é pré-requisito.</li>
-          <li>Admistrador está na página de cadastro de novo usuário.</li>
+          <li>Administrador está na página de cadastro de novo usuário.</li>
         </ul>
       </td>
     </tr><tr>
@@ -121,12 +121,12 @@
       <td>Sistema e Administrador.</td>
     </tr><tr>
       <td>Recursos</td>
-      <td>Identificador e email do novo usuário.</td>
+      <td>Identificador e e-mail do novo usuário.</td>
     </tr><tr>
       <td>Exceções</td>
       <td>
         <ul>
-          <li>Identificador ou email de usuário já cadastrado [Avisa qual dado já está em uso]</li>
+          <li>Identificador ou e-mail de usuário já cadastrado [Avisa qual dado já está em uso]</li>
         </ul>
       </td>
     </tr><tr>
@@ -138,7 +138,7 @@
           <li>Administrador confirma.</li>
           <li>Sistema gera uma senha com números e letras aleatórios.</li>
           <li>Sistema informa que o novo usuário foi cadastrado com sucesso.</li>
-          <li>Sistema envia para o email do novo usuário seu login e sua senha.</li>
+          <li>Sistema envia para o e-mail do novo usuário seu login e sua senha.</li>
         </ul>
       </td>
     </tr>
@@ -147,18 +147,18 @@
 <table> <tr> <th>Título</th> <th align="left">Cadastrar Evento</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Disponibilizar no Sistema um novo evento ciêntífico.</td>
+      <td>Disponibilizar no Sistema um novo evento cientifico.</td>
     </tr><tr>
       <td>Contexto</td>
       <td>
         <ul>
           <li>O cenário Login no Sistema é pré-requisito.</li>
-          <li>Admistrador está na página de cadastro de novo evento.</li>
+          <li>Administrador está na página de cadastro de novo evento.</li>
         </ul>
       </td>
     </tr><tr>
       <td>Atores</td>
-      <td>Sistema e Adminstrador.</td>
+      <td>Sistema e Administrador.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Nome, sigla, logotipo e resumo do evento.</td>
@@ -193,7 +193,7 @@
       <td>
         <ul>
           <li>O cenário Login no Sistema é pré-requisito.</li>
-          <li>Admistrador está na página de cadastro de nova edição.</li>
+          <li>Administrador está na página de cadastro de nova edição.</li>
         </ul>
       </td>
     </tr><tr>
@@ -284,7 +284,7 @@
       <td>Recursos</td>
       <td>
         <ul>
-          <li>Artigo cientifíco em pdf, título, ano, autores, resumo e palavras-chaves.</li>
+          <li>Artigo cientifico em arquivo ".pdf", título, ano, autores, resumo e palavras-chaves.</li>
           <li>Edição e evento relacionado ao artigo.</li>
         </ul>
       </td>
@@ -408,7 +408,7 @@
 <table> <tr> <th>Título</th> <th align="left">Listar Por Edição</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Leitor vizualiza todos os artigos de uma edição de um evento.</td>
+      <td>Leitor visualiza todos os artigos de uma edição de um evento.</td>
     </tr><tr>
       <td>Contexto</td>
       <td>O cenário Exibir Página é pré-requisito.</td>
@@ -462,7 +462,7 @@
 <table> <tr> <th>Título</th> <th align="left">Download de Artigo</th>
     </tr><tr>
       <td>Objetivo</td>
-      <td>Leitor vizualiza o pdf de um artigo.</td>
+      <td>Leitor visualiza o arquivo ".pdf" de um artigo.</td>
     </tr><tr>
       <td>Contexto</td>
       <td>Entre os cenários Buscar Artigo, Listar por Edição e Listar Mais citados, pelo menos um deles é pré-requisito.</td>
@@ -476,7 +476,7 @@
       <td>Episódios</td>
       <td>
         <ul>
-          <li>Leitor realiza download ao acessar link para o pdf do artigo.</li>
+          <li>Leitor realiza download ao acessar link para o arquivo ".pdf" do artigo.</li>
           <li>Sistema incrementa o número de downloads do artigo.</li>
         </ul>
       </td>
@@ -581,4 +581,3 @@ http://www-di.inf.puc-rio.br/~julio/Slct-pub/rej2000.pdf
       </td>
     </tr>
 </table>
-
