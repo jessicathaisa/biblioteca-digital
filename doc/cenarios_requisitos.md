@@ -96,7 +96,6 @@
       <td>
         <ul>
           <li>Usuário digita a nova senha em dois campos de texto.</li>
-          <li>Sistema pede confirmação do usuário.</li>
           <li>Usuário confirma alteração de senha.</li>
           <li>Sistema informa que a senha foi alterada.</li>
         </ul>
