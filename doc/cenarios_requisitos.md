@@ -414,7 +414,7 @@
         <ul>
           <li>Leitor abre a página do evento.</li>
           <li>Sistema obtém da base de dados os dados do evento.</li>
-          <li>Sistema exibe os dados do evento.<li>
+          <li>Sistema exibe os dados do evento.</li>
           <li>Sistema lista as edições do evento.</li>
           <li>Se o Leitor quiser buscar por um artigo</li>
             <ul>
