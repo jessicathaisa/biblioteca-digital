@@ -354,47 +354,6 @@
     </tr>
 </table>
 
-<table> <tr> <th>Título</th> <th align="left">Editar Artigo</th>
-    </tr><tr>
-      <td>Objetivo</td>
-      <td>O Editor altera informações de um artigo já disponibilizado.</td>
-    </tr><tr>
-      <td>Contexto</td>
-      <td>Editor logado na página de edição de artigos.</td>
-    </tr><tr>
-      <td>Atores</td>
-      <td>Sistema, Base de Dados e Editor.</td>
-    </tr><tr>
-      <td>Recursos</td>
-      <td>Evento, edição, título e dados do artigo que são alterados.</td>
-    </tr><tr>
-      <td>Exceções</td>
-      <td>
-        <ul>
-          <li>Algum campo ficou em branco. [Avisa quais campos não foram preenchidos]</li>
-        </ul>
-      </td>
-    </tr><tr>
-      <td>Episódios</td>
-      <td>
-        <ul>
-          <li>Sistema mostra ao Editor quais eventos e edições ele pode alterar.</li>
-          <li>Editor seleciona o evento e a edição que possui o artigo que ele deseja editar.</li>
-          <li>Sistema lista os artigos do evento e edição selecionado.</li>
-          <li>Editor seleciona o artigo que deseja editar.</li>
-          <li>Sistema preenche campos com as informações do artigo.</li>
-          <li>Editor altera os campos desejados.</li>
-          <li>Editor confirma alterações do artigo.</li>
-          <li>Sistema informa que artigo foi alterado com sucesso.</li>
-        </ul>
-      </td>
-    </tr>
-    </tr><tr>
-      <td>Restrição</td>
-      <td>O sistema deve ter interface amigável.</td>
-    </tr>
-</table>
-
 <table> <tr> <th>Título</th> <th align="left">Exibir Página</th>
     </tr><tr>
       <td>Objetivo</td>
@@ -412,6 +371,7 @@
       <td>Episódios</td>
       <td>
         <ul>
+          <li>Sistema exibe os eventos cadastrados.</li>
           <li>Leitor abre a página do evento.</li>
           <li>Sistema obtém da base de dados os dados do evento.</li>
           <li>Sistema exibe os dados do evento.</li>
@@ -510,7 +470,7 @@
     </tr>
 </table>
 
-<table> <tr> <th>Título</th> <th align="left">Atualiza Citações</th>
+<table> <tr> <th>Título</th> <th align="left">Atualizar Citações</th>
     </tr><tr>
       <td>Objetivo</td>
       <td>Sistema atualiza o número de citações de um artigo.</td>
