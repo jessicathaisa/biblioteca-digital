@@ -797,7 +797,40 @@
 
 ## Cenários do Controle
 
-TODO
+<table> <tr> <th>Título</th> <th align="left">Controle do Grupo Logar</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Recebe requisições relacionadas a login, esquecimento dos dados e alteração de senha.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Grupo relacionado: Logar.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema Biblioteca Digital.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>
+        <ul>
+          <li>Dados necessários: Identificador (string), email (string) e  senha (string) do usuário.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>As exceções serão repassadas à visão em forma de mensagens popup.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Se a requisição for de login, repassa o login e a senha para o modelo.</li>
+          <li>Se a requisição for de esquecimento de dados, passa o email para o modelo.</li>
+          <li>Se a requisição for de alteração de senha, passa o login e a nova senha para o modelo.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ser robusto.</td>
+    </tr>
+</table>
 
 ## Referências  
 http://www-di.inf.puc-rio.br/~karin/pos/cenario.pdf  

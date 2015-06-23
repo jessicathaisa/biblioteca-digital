@@ -66,6 +66,12 @@ Tipo | Sujeito
 Noção | Ator responsável pelos artigos científicos de uma edição de um congresso.
 Impacto | <ul><li>Cadastrar um novo artigo no sistema;</li><li>Corrigir os dados de um artigo no sistema.</li></ul>
 
+Nome | Logar
+--- | :--
+Tipo | Verbo
+Noção | Ato de um usuário (Administrador ou Editor) preencher campos de identificador e senha para entrar no ambiente restrito
+Impacto | <ul><li>O usuário poderá alterar sua senha;</li><li>O Administrador pode cadastrar Editores, congressos e edições;</li><li>O Editor pode cadastrar artigos.</li></ul>
+
 Nome | Número de acessos
 --- | :--
 Tipo | Objeto
