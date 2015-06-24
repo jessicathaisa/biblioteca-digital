@@ -11,7 +11,7 @@
       <td>Sistema web.</td>
     </tr><tr>
       <td>Atores</td>
-      <td>Sistema, Administor, Editor e Leitor.</td>
+      <td>Sistema, Administrador, Editor e Leitor.</td>
     </tr><tr>
       <td>Recursos</td>
       <td>Artigos científicos.</td>
@@ -19,12 +19,24 @@
       <td>Episódios</td>
       <td>
         <ul>
+          <li>Administrador faz login.</li>
           <li>Administrador cadatra Editor.</li>
           <li>Administrador cadastra evento e edição.</li>
           <li>Administrador associa Editor à uma edição.</li>
+          <li>Editor faz login.</li>
           <li>Editor cadastra artigos ciêntíficos.</li>
           <li>Sistema disponibiliza artigos.</li>
           <li>Leitor busca e obtém artigos desejados.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>
+        <ul>
+          <li>O sistema deve ser feito utilizando o framework Kepler.</li>
+          <li>O sistema deve atualizar as citações utilizando o google scholar.</li>
+          <li>O sistema deve ser robusto.</li>
+          <li>O sistema deve ter interface amigável.</li>
         </ul>
       </td>
     </tr>
@@ -609,7 +621,12 @@
       <td>Usuário preenche campos de texto com login e senha. O sistema informa que o login foi realizado e exibe links para as funcionalidades.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>O usuário deve acessar a página host/login em um browser atual.</td>
+      <td>
+        <ul>
+          <li>O usuário deve acessar a página host/login em um browser atual.</li>
+          <li>Pré-requisito: Cenário Login no Sistema.</li>
+        </ul>
+      </td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema, Administrador e Editor.</td>
@@ -632,11 +649,15 @@
           <li>Usuário preenche o campo de login.</li>
           <li>Usuário preenche o campo de senha.</li>
           <li>Usuário clica no botão de confirmação.</li>
+          <li>Sistema faz requisição de Login no Sistemma.</li>
           <li>Sistema exibe página de acesso restrito.</li>
           <li>Se o Usuário for o Administrador, o Sistema exibe links para as funcionalidades de Alterar Senha, Incluir Artigo, Cadastrar Evento, Cadastrar Edição e Associar Editor.</li>
-          <li>Se o Usuário for um Editor, o Sistema exibe links para as funcionalidades de Alterar Senha, Incluir Artigo e Editar Artigo.<li>
+          <li>Se o Usuário for um Editor, o Sistema exibe links para as funcionalidades de Alterar Senha, Incluir Artigo e Editar Artigo.</li>
         </ul>
       </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
     </tr>
 </table>
 
@@ -646,7 +667,7 @@
       <td>Usuário preenche campo com seu email. Sistema informa que os dados foram enviados.</td>
     </tr><tr>
       <td>Contexto</td>
-      <td>Pré requisito: Exibe Página de Login no Sistema.</td>
+      <td>Pré requisito: Cenário Esqueceu dos dados.</td>
     </tr><tr>
       <td>Atores</td>
       <td>Sistema, Administrador e Leitor.</td>
@@ -668,9 +689,13 @@
         <ul>
           <li>Usuário preenche o campo de email.</li>
           <li>Usuário clica no botão de confirmação.</li>
+          <li>Sistema faz requisição de esqueceu dos dados.</li>
           <li>Sistema exibe mensagem dizendo que enviou os dados para o email do usuário.</li>
         </ul>
       </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
     </tr>
 </table>
 
@@ -682,7 +707,7 @@
       <td>Contexto</td>
       <td>
         <ul>
-          <li>Pré requisito: Exibe Página de Login no Sistema.</li>
+          <li>Pré requisito: Cenário Alterar Senha.</li>
           <li>Usuário está na página de alteração de senha.</li>
         </ul>
       </td>
@@ -707,9 +732,13 @@
         <ul>
           <li>Usuário digita a nova senha nos dois campos de texto.</li>
           <li>Usuário clica no botão de confirmação.</li>
+          <li>Sistema faz requisição de alterar senha.</li>
           <li>Sistema exibe mensagem dizendo que a senha foi alterada.</li>
         </ul>
       </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
     </tr>
 </table>
 
@@ -721,7 +750,7 @@
       <td>Contexto</td>
       <td>
         <ul>
-          <li>Pré requisito: Exibe Página de Login no Sistema.</li>
+          <li>Pré requisito: Cenário Cadastrar Editor.</li>
           <li>Administrador está na página de cadastro de editor.</li>
         </ul>
       </td>
@@ -747,9 +776,13 @@
           <li>Administrador digita o login do novo usuário.</li>
           <li>Administrador digita o email do novo usuário.</li>
           <li>Administrador clica no botão de confirmação.</li>
+          <li>Sistema faz requisição de Cadastrar Editor.</li>
           <li>Sistema informa que o usuário foi cadastrado.</li>
         </ul>
       </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
     </tr>
 </table>
 
@@ -761,7 +794,7 @@
       <td>Contexto</td>
       <td>
         <ul>
-          <li>Pré requisito: Exibe Página de Login no Sistema.</li>
+          <li>Pré requisito: Cenário Cadastar Evento.</li>
           <li>Administrador está na página de cadastro de evento.</li>
         </ul>
       </td>
@@ -784,14 +817,18 @@
       <td>Episódios</td>
       <td>
         <ul>
-          <li>Administrador digita o nome.<li>
-          <li>Administrador digita a sigla.<li>
-          <li>Administrador abre o popup para o buscar o logotipo.<li>
-          <li>Administrador digita o resumo.<li>
-          <li>Administrador clica em confirmar.<li>
+          <li>Administrador digita o nome.</li>
+          <li>Administrador digita a sigla.</li>
+          <li>Administrador abre o popup para o buscar o logotipo.</li>
+          <li>Administrador digita o resumo.</li>
+          <li>Administrador clica em confirmar.</li>
+          <li>Sistema faz requisição de cadastrar evento.</li>
           <li>Sistema exibe mensagem dizendo que o novo evento foi cadastrado com sucesso.</li>
         </ul>
       </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
     </tr>
 </table>
 
@@ -811,19 +848,92 @@
       <td>Recursos</td>
       <td>
         <ul>
-          <li>Dados necessários: Identificador (string), email (string) e  senha (string) do usuário.</li>
+          <li>Dados necessários: Identificador, email e senha do usuário.</li>
         </ul>
       </td>
     </tr><tr>
       <td>Exceções</td>
-      <td>As exceções serão repassadas à visão em forma de mensagens popup.</td>
+      <td>As exceções serão repassadas à visão em forma de mensagens de texto.</td>
     </tr><tr>
       <td>Episódios</td>
       <td>
         <ul>
-          <li>Se a requisição for de login, repassa o login e a senha para o modelo.</li>
-          <li>Se a requisição for de esquecimento de dados, passa o email para o modelo.</li>
-          <li>Se a requisição for de alteração de senha, passa o login e a nova senha para o modelo.</li>
+          <li>Se a requisição for de login, realiza cenário Efetuar Login.</li>
+          <li>Se a requisição for de esquecimento de dados, realiza cenário Enviar Dados.</li>
+          <li>Se a requisição for de alteração de senha, realiza cenário Modificar Registro de Senha.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ser robusto.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Controle do Grupo Administrador</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Recebe requisições relacionadas a cadastrar editor, cadastrar evento, cadastrar edição e associar editor.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Grupo relacionado: Adminstrador.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema Biblioteca Digital.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>
+        <ul>
+          <li>Dados necessários: Identificador do administrador, dados do editor, dados do evento e dados da edição.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>As exceções serão repassadas à visão em forma de mensagens de texto.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Se a requisição for de cadastrar editor, realiza cenário Inserir Registro de Editor.</li>
+          <li>Se a requisição for de cadastrar evento, realiza cenário Inserir Registro de Evento.</li>
+          <li>Se a requisição for de cadastrar edição, realiza cenário Inserir Registro de Edição.</li>
+          <li>Se a requisição for de associar editor, realiza cenário Inserir Permissão para Editor.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ser robusto.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Controle do Grupo Artigo</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Recebe requisições relacionadas a incluir artigo, exibir página, listar por edição, listar mais citados e atualizar citações.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Grupo relacionado: Artigo.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema Biblioteca Digital.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>
+        <ul>
+          <li>Dados necessários: Dados do artigo.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>As exceções serão repassadas à visão em forma mensagens de texto.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Se a requisição for de Incluir Artigo, realiza cenário Inserir Registro de Artigo.</li>
+          <li>Se a requisição for de Exibir Página, realiza cenário Obter Eventos.</li>
+          <li>Se a requisição for de Listar por Edição, realiza cenário Obter Artigos por Edição.</li>
+          <li>Se a requisição for de Listar Mais Citados, realiza cenário Obter Artigos por Citações.</li>
+          <li>Se a requisição for de Atualizar Citações, realiza cenário Atualizar Registro de Citações.</li>
         </ul>
       </td>
     </tr><tr>
