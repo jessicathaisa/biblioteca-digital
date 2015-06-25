@@ -1,5 +1,47 @@
 # Cenários no Momento dos Requisitos
 
+## Cenário de Integração
+
+<table> <tr> <th>Título</th> <th align="left">Software Biblioteca Digital</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Disponibilizar artigos científicos e classificá-los por número de citações.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>Sistema web.</td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema, Administrador, Editor e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Artigos científicos.</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Administrador faz login.</li>
+          <li>Administrador cadatra Editor.</li>
+          <li>Administrador cadastra evento e edição.</li>
+          <li>Administrador associa Editor à uma edição.</li>
+          <li>Editor faz login.</li>
+          <li>Editor cadastra artigos ciêntíficos.</li>
+          <li>Sistema disponibiliza artigos.</li>
+          <li>Leitor busca e obtém artigos desejados.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>
+        <ul>
+          <li>O sistema deve ser feito utilizando o framework Kepler.</li>
+          <li>O sistema deve atualizar as citações utilizando o google scholar.</li>
+          <li>O sistema deve ser robusto.</li>
+          <li>O sistema deve ter interface amigável.</li>
+        </ul>
+      </td>
+    </tr>
+</table>
+
 <table> <tr> <th>Título</th> <th align="left">Login no Sistema</th>
     </tr><tr>
       <td>Objetivo</td>

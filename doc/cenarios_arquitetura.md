@@ -1,47 +1,5 @@
 # Cenários no Momento da Arquitetura
 
-## Cenário de Integração
-
-<table> <tr> <th>Título</th> <th align="left">Software Biblioteca Digital</th>
-    </tr><tr>
-      <td>Objetivo</td>
-      <td>Disponibilizar artigos científicos e classificá-los por número de citações.</td>
-    </tr><tr>
-      <td>Contexto</td>
-      <td>Sistema web.</td>
-    </tr><tr>
-      <td>Atores</td>
-      <td>Sistema, Administrador, Editor e Leitor.</td>
-    </tr><tr>
-      <td>Recursos</td>
-      <td>Artigos científicos.</td>
-    </tr><tr>
-      <td>Episódios</td>
-      <td>
-        <ul>
-          <li>Administrador faz login.</li>
-          <li>Administrador cadatra Editor.</li>
-          <li>Administrador cadastra evento e edição.</li>
-          <li>Administrador associa Editor à uma edição.</li>
-          <li>Editor faz login.</li>
-          <li>Editor cadastra artigos ciêntíficos.</li>
-          <li>Sistema disponibiliza artigos.</li>
-          <li>Leitor busca e obtém artigos desejados.</li>
-        </ul>
-      </td>
-    </tr><tr>
-      <td>Restrição</td>
-      <td>
-        <ul>
-          <li>O sistema deve ser feito utilizando o framework Kepler.</li>
-          <li>O sistema deve atualizar as citações utilizando o google scholar.</li>
-          <li>O sistema deve ser robusto.</li>
-          <li>O sistema deve ter interface amigável.</li>
-        </ul>
-      </td>
-    </tr>
-</table>
-
 ## Cenários do Modelo
 
 <table> <tr> <th>Título</th> <th align="left">Efetuar Login</th>
@@ -563,7 +521,49 @@
     </tr>
 </table>
 
-<table> <tr> <th>Título</th> <th align="left">Atualiza Registro de Citações</th>
+<table> <tr> <th>Título</th> <th align="left">Atualizar Número de Downloads</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Incrementa o número de downloads de um artigo.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré-condição: Obter Artigos por Edição e Obter Artigos por Citações.</li>
+          <li>O cenário ocorre quando um download de um pdf é feito.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Base de Dados.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>
+        <ul>
+          <li>Parâmetros: path do artigo (string) e número de downloads do artigo (inteiro).</li>
+          <li>Tabela de artigos.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>N/A</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Faz busca na tabela de artigos restringindo com base no path para pdf.</li>
+          <li>Obtém o número de downloads do artigo do registro.</li>
+          <li>Incremente o número de downloads do artigo.</li>
+          <li>Altera o número de downloads do registro do artigo.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ser robusto.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Atualizar Registro de Citações</th>
     </tr><tr>
       <td>Objetivo</td>
       <td>Obter no Google Scholar o número de citações dos artigos.</td>
@@ -832,6 +832,256 @@
     </tr>
 </table>
 
+<table> <tr> <th>Título</th> <th align="left">Exibe Página de Cadastrar Edição</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Administrador seleciona evento e preenche ano da edição. Sistema confirma cadastro de nova edição.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Cadastar Edição.</li>
+          <li>Administrador está na página de cadastro de edição.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Adminstrador.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Lista selecionável com os eventos, campo de texto para ano, botão de confirmação e botão de voltar.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>
+        <ul>
+          <li>Já existe uma edição no ano escolhido. [Avisa que já existe uma edição neste ano]</li>
+          <li>Algum campo ficou em branco após clicar confirmação. [Avisa qual campo ficou em branco]</li>
+          <li>Usuário clica no botão de voltar [Volta à página anterior]</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Administrador seleciona o evento.</li>
+          <li>Administrador preenche campo de ano da edição.</li>
+          <li>Administrador clica em confirmar.</li>
+          <li>Sistema faz requisição de cadastrar edição.</li>
+          <li>Sistema exibe mensagem dizendo que a nova edição foi cadastrada com sucesso.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Exibe Página de Associar Editor</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Administrador seleciona evento, edição e editor e confirma. Sistema confirma associação de editor com edição.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Associar Editor.</li>
+          <li>Administrador está na página de associar editor.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Adminstrador.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Lista selecionável com os eventos, campo de texto para ano, lista selcionável com os editores, botão de confirmação e botão de voltar.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>
+        <ul>
+          <li>Não existe edição com o ano escolhido. [Avisa que não existe a edição selecionada para tal evento]</li>
+          <li>O editor já está associada a edição escolhida. [Avisa que o editor já está associado]</li>
+          <li>Algum campo ficou em branco após clicar confirmação. [Avisa qual campo ficou em branco]</li>
+          <li>Usuário clica no botão de voltar [Volta à página anterior]</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Administrador seleciona o evento.</li>
+          <li>Administrador preenche campo de ano da edição.</li>
+          <li>Administrador seleciona o editor.</li>
+          <li>Administrador clica em confirmar.</li>
+          <li>Sistema faz requisição de associar editor.</li>
+          <li>Sistema exibe mensagem dizendo que o editor foi associado com sucesso.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Exibe Página de Incluir Artigo</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Editor preenche as informações de um artigo. Sistema confirma a inserção de um novo artigo.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Incluir Artigo.</li>
+          <li>Editor está na página de incluir artigo.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Editor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Campo de texto para título, campo de texto para autores, popup para buscar o arquivo pdf, campo de texto para o ano, campo de texto para o resumo, campo de texto para as palavras-chaves, botão de confimação e botão de voltar.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>
+        <ul>
+          <li>Algum campo ficou em branco após clicar confirmação. [Avisa qual campo ficou em branco]</li>
+          <li>Usuário clica no botão de voltar [Volta à página anterior]</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Editor preenche o título, autores, ano, resumo e palavras chaves.</li>
+          <li>Editor faz upload do arquivo pdf do artigo.</li>
+          <li>Editor confirma a inserção do novo artigo.</li>
+          <li>Sistema faz requisição de incluir artigo.</li>
+          <li>Sistema exibe mensagem dizendo que o artigo foi inserido com sucesso.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Exibe Página Principal</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Sistema exibe eventos, Leitor escolhe um evento e Sistema exibe as informações do evento escolhido.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Exibir Página.</li>
+          <li>Leitor está na página index do sistema.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema, Leitor e Google Search.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Imagem com os logotipos, labels com os nomes, resumos e edições dos eventos, link para mais citados e caixa de busca.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>N/A</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Sistema faz requisição de exibir evento.</li>
+          <li>Sistema lista os logotipos e nomes dos eventos disponíveis no sistema.</li>
+          <li>Leitor escolhe um dos eventos disponíveis.</li>
+          <li>Sistema lista o nome, o resumo e as edições do evento.</li>
+          <li>Se o Leitor escolher uma edição, acontece o cenário Exibir por Edição.</li>
+          <li>Se o Leitor escolher listar mais citados, acontece o cenário Exibir mais Citados.</li>
+          <li>Se o Leitor fazer uma busca, ele é redirecionado para o Google Search.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>
+        <ul>
+          <li>O sistema deve ter interface amigável.</li>
+          <li>A busca deve ser feita pelo Google Search.</li>
+        <ul>
+      </td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Exibe por Edição</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Sistema exibe artigos de uma edição.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Listar Por Edição.</li>
+          <li>Leitor está na página da edição desejada.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Links para os pdfs e labels com o nome, autores, resumo, palavras chaves, número de citações e número de downloads dos artigos.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>N/A</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Sistema faz requisição de exibir por evento.</li>
+          <li>Sistema lista os dados dos artigos da edição.</li>
+          <li>Se o leitor acessar o link do artigo, o download é realizado.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
+    </tr>
+</table>
+
+<table> <tr> <th>Título</th> <th align="left">Exibe mais Citados</th>
+    </tr><tr>
+      <td>Objetivo</td>
+      <td>Sistema exibe artigos mais citados.</td>
+    </tr><tr>
+      <td>Contexto</td>
+      <td>
+        <ul>
+          <li>Pré requisito: Cenário Listar mais Citados.</li>
+          <li>Leitor está na página de artigos mais citados.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Atores</td>
+      <td>Sistema e Leitor.</td>
+    </tr><tr>
+      <td>Recursos</td>
+      <td>Links para os pdfs e labels com o nome, autores, resumo, palavras chaves, número de citações e número de downloads dos artigos.</td>
+    </tr><tr>
+      <td>Exceções</td>
+      <td>N/A</td>
+    </tr><tr>
+      <td>Episódios</td>
+      <td>
+        <ul>
+          <li>Sistema faz requisição de exibir mais citados.</li>
+          <li>Sistema lista os dados dos artigos por ordem decrescente de número de citações.</li>
+          <li>Se o leitor acessar o link do artigo, o download é realizado.</li>
+        </ul>
+      </td>
+    </tr><tr>
+      <td>Restrição</td>
+      <td>O sistema deve ter interface amigável.</td>
+    </tr>
+</table>
+
 ## Cenários do Controle
 
 <table> <tr> <th>Título</th> <th align="left">Controle do Grupo Logar</th>
@@ -934,6 +1184,7 @@
           <li>Se a requisição for de Listar por Edição, realiza cenário Obter Artigos por Edição.</li>
           <li>Se a requisição for de Listar Mais Citados, realiza cenário Obter Artigos por Citações.</li>
           <li>Se a requisição for de Atualizar Citações, realiza cenário Atualizar Registro de Citações.</li>
+          <li>Se a houver um download de um pdf, realiza cenário Atualizar Número de Downloads.</li>
         </ul>
       </td>
     </tr><tr>

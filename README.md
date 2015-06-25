@@ -35,11 +35,11 @@ O planejamento será dividido nos seguintes marcos:
     - Banco de Dados Funcionando
     - Consulta de artigos mais citados
     - Classificação de artigos
-- Marco 4: Entrega 25/06
+- Marco 4: Entrega 30/06
     - Entrega parcial do código
     - Cadastro de editores, eventos e edições
     - Cenarios e LAL no instante do código
-- Marco 5: Entrega 27/06
+- Marco 5: Entrega 07/07
     - Entrega final do código
     - Relatório de testes
     - Relatório de inspeção
@@ -52,6 +52,7 @@ O controle será atualizado a medida que os marcos são feitos.
 - 02/06 Foi feita a arquitetura em alto nível
 - 11/06 Foram criados o planejamentos e os casos de teste
 - 11/06 Foi feita uma revisão no planejamento e nos cenários
+- 25/06 Foram terminados os cenários de arquitetura
 
 ## Motivação
 O grupo tentará proporcionar o melhor sistema possível, dada as limitações de tempo e habilidade de cada um.
