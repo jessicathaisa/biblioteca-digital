@@ -15,17 +15,18 @@
 
 <body>
 
-<h1>Biblioteca Digital</h1>
+<%
 
-<ul>
-    <%
-    local sql = require("util/sql")
-    for c in sql.realizaConsulta("select * from congresso") do
-        cgilua.print("<li>" .. c.nm_congresso .. "</li>")
-    end
-    %>
-</ul>
+local sql = require "util/sql"
 
+cgilua.print("<h1>Biblioteca Digital</h1>")
+
+for c in sql.realizaConsulta("select * from congresso") do
+    cgilua.print("<p><a href=congresso.lp?congresso=" .. c.id_congresso ..
+        ">" .. c.nm_congresso .. "</a></p>")
+end
+
+%>
 
 </body>
 </html>
