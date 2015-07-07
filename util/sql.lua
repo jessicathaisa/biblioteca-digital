@@ -16,5 +16,12 @@ function sql.realizaConsulta(comando)
     end
 end
 
+function sql.cadastraEvento(nm_congresso)
+	local query = string.format("insert into congresso (id_congresso, nm_congresso, ds_area)"
+  							  .."VALUES ('%s','%s','%s')",
+								0, nm_congresso, "empty")
+	sql.realizaConsulta(query)
+end
+
 return sql
 
