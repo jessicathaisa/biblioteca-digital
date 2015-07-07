@@ -32,17 +32,10 @@ cgilua.print("<h1>Cadastrar Evento</h1>")
 <%
 
 if cgilua.POST.nome and cgilua.POST.sigla and cgilua.POST.resumo then
-
 	local sql = require "util/sql"
-	local ret = sql.cadastraEvento(cgilua.POST.nome)
+	sql.cadastraEvento(cgilua.POST.nome, cgilua.POST.resumo)
 
-	cgilua.print(ret)
 	cgilua.print("<p>Cadastrado com sucesso!</p>")
-
-else
-
-	cgilua.print("<p>Dados faltando!</p>")
-
 end
 
 %>
