@@ -16,11 +16,22 @@ function sql.realizaConsulta(comando)
     end
 end
 
-function sql.cadastraEvento(nm_congresso, ds_area)	
-
+function sql.cadastraEvento(nm_congresso, ds_area)
 	local query = string.format("insert into congresso (nm_congresso, ds_area)"
   							  .."VALUES ('%s','%s')",
 								nm_congresso, ds_area)
+
+	return sql.realizaConsulta(query)
+end
+
+function sql.getEventos()
+	return sql.realizaConsulta("select * from congresso")
+end
+
+function sql.cadastraEdicao(id_congresso, ds_ano)
+	local query = string.format("insert into edicao (id_congresso, nm_edicao, ds_ano)"
+  							  .."VALUES ('%s','%s','%s')",
+								id_congresso, ds_ano, ds_ano)
 
 	return sql.realizaConsulta(query)
 end

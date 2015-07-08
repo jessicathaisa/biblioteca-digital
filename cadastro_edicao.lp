@@ -18,22 +18,31 @@
 <%
 
 local sql = require "util/sql"
-cgilua.print("<h1>Cadastrar Evento</h1>")
+cgilua.print("<h1>Cadastrar Edição</h1>")
 
 %>
 
 <form method="post" action="" >
-    Nome: <input name="nome" maxlength="20" size="20"><br />
-    Sigla: <input name="sigla" maxlength="20" size="20"><br />
-    Resumo: <input name="resumo" maxlength="140" size="140"><br />
+    Evento: 
+	<select name="evento">
+		<%		
+			local eventos = sql.getEventos()
+			
+			for c in eventos do
+				cgilua.print("<option value='" .. c.id_congresso .. "'>" .. c.nm_congresso .. "</option>")
+			end
+		%>  		
+	</select><br />
+    Ano: <input name="ano" maxlength="4" size="4"><br /><br />
     <input type="submit" value="Confirmar">
     <input type="reset" value="Resetar">
 </form>
 
 <%
 
-if cgilua.POST.nome and cgilua.POST.sigla and cgilua.POST.resumo then
-	sql.cadastraEvento(cgilua.POST.nome, cgilua.POST.resumo)
+if cgilua.POST.evento and cgilua.POST.ano then
+
+	sql.cadastraEdicao(cgilua.POST.evento, cgilua.POST.ano)
 
 	cgilua.print("<p>Cadastrado com sucesso!</p>")
 end
