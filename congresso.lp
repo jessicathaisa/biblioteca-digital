@@ -21,17 +21,19 @@
 local sql = require "util/sql"
 
 local id = cgilua.QUERY.congresso
-
 local congresso = sql.realizaConsulta("select * from congresso " ..
     "where id_congresso = " .. id)()
 
 cgilua.print("<h2>Biblioteca Digital</h2>")
 cgilua.print("<h1>" .. congresso.nm_congresso .. "</h1>")
 cgilua.print("<p>" .. congresso.ds_area .. "</p>")
+cgilua.print("<h3><a href=maiscitados.lp?congresso=" .. id .. ">Mais Citados</a></p>")
 cgilua.print("<h3>Edições:</h3>")
 
 for e in sql.realizaConsulta("select * from edicao where id_congresso = " .. id) do
-    cgilua.print("<p>" .. e.ds_ano .. " - " .. e.nm_edicao .. "</p>")
+    local link_edicao = "edicao.lp?congresso=" .. id .. "&edicao=" .. e.id_edicao
+    cgilua.print("<p><a href=" .. link_edicao .. ">" .. e.ds_ano .. " - " .. e.nm_edicao
+         .. "</a></p>")
 end
 
 %>

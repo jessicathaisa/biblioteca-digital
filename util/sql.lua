@@ -11,6 +11,9 @@ function sql.realizaConsulta(comando)
         "localhost", 3306))
     local resultado, erro = conexao:execute(comando)
     conexao:close()
+    if not resultado then
+        return function() return nil end
+    end
     return function()
         return resultado:fetch({}, "a")
     end
